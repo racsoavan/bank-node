@@ -1,0 +1,35 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "Playground",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint app.js",
+    "start": "DEBUG=app nodemon app.js",
+    "test": "mocha"
+  },
+  "author": "franl@illyum.com",
+  "license": "ISC",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  },
+  "devDependencies": {
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "mocha": "^6.1.4"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": 2500,
+    "env": {
+      "NODE_ENV": "DEV",
+      "PORT": 8880
+    }
+  }
+}
